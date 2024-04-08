@@ -1,0 +1,20 @@
+.wrapper {
+    text-align: center;
+    width: 1000px;
+    padding-left: 5px;
+}
+
+.img {
+    float: left;
+    margin-right: 10px;
+}
+
+.text {
+
+}
+
+.el {
+    float: left;
+    list-style-type: none;
+    margin: 0 10px;
+}
