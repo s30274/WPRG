@@ -1,0 +1,39 @@
+.was {
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+}
+
+.equal-width {
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    padding: 10px;
+    margin: 3px 10px;
+    flex: 1 1 auto;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+}
+
+.fixed-percentage {
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    padding: 10px;
+    margin: 3px 10px;
+    width: 40%;
+    flex: 0 1 auto;
+}
+
+.flexible {
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    padding: 10px;
+    margin: 3px 10px;
+    flex: 1 1 auto;
+}

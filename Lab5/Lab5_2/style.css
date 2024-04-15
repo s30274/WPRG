@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    background-color: lightblue;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    margin: auto 10px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    list-style-type: none;
+}
