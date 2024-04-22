@@ -1,69 +1,48 @@
 <?php
-function pomnozMacierze($macierz1, $macierz2) {
-    $wynik = array();
+    function mnozenie($m1, $m2) {
+        $k1 = count($m1);
+        $w1 = count($m1[0]);
+        $k2 = count($m2);
+        $w2 = count($m2[0]);
+        $mnoz = array();
 
-    // Sprawdzenie czy liczba kolumn pierwszej macierzy równa się liczbie wierszy drugiej macierzy
-    $liczbaWierszy1 = count($macierz1);
-    $liczbaKolumn1 = count($macierz1[0]);
-    $liczbaWierszy2 = count($macierz2);
-    $liczbaKolumn2 = count($macierz2[0]);
-
-    if ($liczbaKolumn1 != $liczbaWierszy2) {
-        return "Nie można pomnożyć macierzy - niezgodne wymiary.";
-    }
-
-    for ($i = 0; $i < $liczbaWierszy1; $i++) {
-        for ($j = 0; $j < $liczbaKolumn2; $j++) {
-            $wynik[$i][$j] = 0;
+        if ($k1 != $w2) {
+            return "Macierze mają nieprawidłowe wymiary";
         }
-    }
 
-
-    for ($i = 0; $i < $liczbaWierszy1; $i++) {
-        for ($j = 0; $j < $liczbaKolumn2; $j++) {
-            for ($k = 0; $k < $liczbaKolumn1; $k++) {
-                $wynik[$i][$j] += $macierz1[$i][$k] * $macierz2[$k][$j];
+        for ($i = 0; $i < $w1; $i++) {
+            for ($j = 0; $j < $k2; $j++) {
+                $mnoz[$i][$j] = 0;
             }
         }
+        for ($i = 0; $i < $w1; $i++) {
+            for ($j = 0; $j < $k2; $j++) {
+                for ($k = 0; $k < $w1; $k++) {
+                    $mnoz[$i][$j] += $m1[$i][$k] * $m2[$k][$j];
+                }
+            }
+        }
+        return $mnoz;
     }
 
-    return $wynik;
-}
+    function wyswietl($m)
+    {
+        for($i=0; $i<count($m); $i++){
+            for($j=0; $j<count($m[0]); $j++){
+                echo $m[$i][$j] . "\t";
+            }
+            echo "\n";
+        }
+    }
 
-
-$macierz1 = array(
-    array(1, 2),
-    array(3, 4),
-);
-
-$macierz2 = array(
-    array(5, 6),
-    array(7, 8),
-);
-
-$wynik = pomnozMacierze($macierz1, $macierz2);
-
-
-echo "Macierz wynikowa:<br>";
-foreach ($wynik as $wiersz) {
-    echo implode(" ", $wiersz) . "<br>";
-}
-//    function wyswietl($m)
-//    {
-//        for($i = 0; $i < count($m); $i++){
-//            for($j = 0; $j < count($m); $j++){
-//                echo $m[$i][$j];
-//            }
-//            echo "\n";
-//        }
-//    }
-
-    $m1[2][3]=array(
-        array(1, 2, 3),
-        array(4, 5, 6)
+    $macierz1 = array(
+        array(1, 2),
+        array(3, 4),
+    );
+    $macierz2 = array(
+        array(5, 6),
+        array(7, 8),
     );
 
-//    wyswietl($m1);
-    $m2[3][2]=2;
-    mnozenie($m1, $m2);
+    wyswietl(mnozenie($macierz1, $macierz2));
 ?>
