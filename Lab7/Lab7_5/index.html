@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Kalkulator</h2>
+
+    <div class="prostybox">
+        <h3>Prosty</h3>
+        <form method="post" action="prosty.php">
+            <input type="text" id="pierwsza" name="pierwsza" class="pole">
+            <select id="znak" name="znak">
+                <option value="dodawanie">Dodawanie</option>
+                <option value="odejmowanie">Odejmowanie</option>
+                <option value="mnozenie">Mnożenie</option>
+                <option value="dzielenie">Dzielenie</option>
+            </select>
+            <input type="text" id="druga" name="druga" class="pole"><br>
+            <button type="submit" id="oblicz1" value="oblicz1" class="oblicz">Oblicz</button>
+        </form>
+    </div>
+
+    <div class="linia"></div>
+
+    <div class="zaawansowanybox">
+        <h3>Zaawansowany</h3>
+        <form method="post" action="zaawansowany.php">
+            <input type="text" id="liczba" name="liczba" class="pole">
+            <select id="funkcja" name="funkcja">
+                <option value="cos">cos</option>
+                <option value="sin">sin</option>
+                <option value="tg">tg</option>
+                <option value="bintodec">bin->dec</option>
+                <option value="dectobin">dec->bin</option>
+                <option value="dectohex">dec->hex</option>
+                <option value="hextodec">hex->dec</option>
+            </select><br>
+            <button type="submit" id="oblicz2" value="oblicz2" class="oblicz">Oblicz</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
