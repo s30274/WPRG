@@ -1,0 +1,4 @@
+test@o2.pl;Test12$
+test@gmail.com;Test12$
+test@wp.pl;Test12$
+test@interia.pl;Test12$
